@@ -10,20 +10,21 @@ const { TabPane } = Tabs;
 function Profile() {
   const [loading, setLoading] = useState(false);
   const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user.data);
   const onFinish = async (values) => {
     setLoading(true);
     try {
+      // const temp = {...values, _id: user.data._id}
+      console.log(values);
       const result = await axios.post("api/user/update", {
         ...values,
-        _id: user._id,
+        _id: user._id
       });
       localStorage.setItem("user", JSON.stringify(result.data));
       setLoading(false);
       message.success("Profile updated successfully");
     } catch (error) {
       setLoading(false);
-      message.error("updation failed");
+      message.error("Registration failed");
     }
   };
   return (
@@ -32,7 +33,7 @@ function Profile() {
       <div className="update-profile">
         <h4><b>Update Profile</b></h4>
         <hr />
-        <Form layout="horizontal" onFinish={onFinish} initialValues={user.data}>
+        <Form layout="vertical" onFinish={onFinish} initialValues={user}>
           <Tabs defaultActiveKey="1">
             <TabPane tab="Personal Info" key="1">
               <PersonalInfo />

@@ -10,7 +10,7 @@ function Login() {
   const[loading, setLoading] = useState(false);
   const navigate = useNavigate()
   const handleBackBtn = () => {
-    navigate("/start");
+    navigate("/");
   }
   const onFinish = async (values) => {
     setLoading(true);

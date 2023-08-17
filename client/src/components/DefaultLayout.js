@@ -1,64 +1,40 @@
-import React from 'react';
-// import './../resources/authentication.css';
-import './../resources/defaultlayout.css';
-import { Button, Dropdown, Space } from 'antd';
-import { Link, useNavigate } from 'react-router-dom';
-
-
+import { Button, Dropdown, Menu } from "antd";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./../resources/defaultlayout.css";
+import { UserOutlined  } from "@ant-design/icons";
 function DefaultLayout(props) {
-
+  const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('user'))
-
-  
-const items = [ 
-  {
-    key: '1',
-    label: (
-      <Link to='/home'>home</Link>
-    ),
-  },
-  {
-    key: '2',
-    label: (
-      <Link to='/profile'>profile</Link>
-
-    ),
-  },
-  {
-    key: '3',
-    label: (
-      
-      <span onClick = {() =>{
-        localStorage.removeItem('user')
-        navigate('/login')
-      }}>logout</span>
-    ),
-  },
-];
-
+  const menu = (
+    <Menu>
+      <Menu.Item>
+      <Link to="/home">Home</Link>
+      </Menu.Item>
+      <Menu.Item>
+        <Link to="/profile">Profile</Link>
+      </Menu.Item>
+      <Menu.Item
+        onClick={() => {
+          localStorage.removeItem("user");
+          navigate("/login");
+        }}
+      >
+        <span>Logout</span>
+      </Menu.Item>
+    </Menu>
+  );
   return (
     <div className="layout">
-        <div className="header">
-            <p>ResumeWizard</p>
-            <Space direction="vertical">
-              <Space wrap>
-                <Dropdown
-                  menu={{
-                    items,
-                  }}
-                  placement="bottomLeft"
-                >
-                  <Button>button</Button>
-                </Dropdown>
-              </Space>
-            </Space>
-        </div>
-        <div className="content">
-            {props.children}
-        </div>
+      <div className="header">
+        <h1 onClick={()=>navigate('/home')} style={{cursor:'pointer'}}>SHEY CV</h1>
+        <Dropdown overlay={menu} placement="bottomLeft">
+          <Button icon={<UserOutlined />}>{user.username}</Button>
+        </Dropdown>
+      </div>
+      <div className="content" style={{overflow:'scroll'}}>{props.children}</div>
     </div>
-  )
+  );
 }
 
-export default DefaultLayout
+export default DefaultLayout;

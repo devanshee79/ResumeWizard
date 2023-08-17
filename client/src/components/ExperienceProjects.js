@@ -16,8 +16,6 @@ function ExperienceProjects() {
                 <>
                   <div className="col-md-3">
                     <Form.Item
-                    labelCol={{ span: 8 }}
-                    wrapperCol={{ span: 12 }}
                       {...restField}
                       name={[name, "company"]}
                       rules={[
@@ -30,7 +28,6 @@ function ExperienceProjects() {
 
                   <div className="col-md-2">
                     <Form.Item
-                    className="gridOn"
                       {...restField}
                       name={[name, "years"]}
                       rules={[
@@ -43,8 +40,6 @@ function ExperienceProjects() {
 
                   <div className="col-md-3">
                     <Form.Item
-                    
-                    className="gridOn"
                       {...restField}
                       name={[name, "place"]}
                       rules={[
@@ -56,8 +51,6 @@ function ExperienceProjects() {
                   </div>
                   <div className="col-md-2">
                     <Form.Item
-                    
-                    className="gridOn"
                       {...restField}
                       name={[name, "range"]}
                       rules={[
@@ -94,8 +87,6 @@ function ExperienceProjects() {
       <h5><b>Projects</b></h5>
       <hr />
       <Form.List name="projects">
-      
-      className="gridOn"
         {(fields, { add, remove }) => (
           <>
             <div className="row">
@@ -103,8 +94,6 @@ function ExperienceProjects() {
                 <>
                   <div className="col-md-4">
                     <Form.Item
-                    
-                    className="gridOn"
                       {...restField}
                       name={[name, "title"]}
                       rules={[
@@ -117,8 +106,6 @@ function ExperienceProjects() {
 
                   <div className="col-md-4">
                     <Form.Item
-                    
-                    className="gridOn"
                       {...restField}
                       name={[name, "rating"]}
                       rules={[
@@ -130,8 +117,6 @@ function ExperienceProjects() {
                   </div>
                   <div className="col-md-2">
                     <Form.Item
-                    
-                    className="gridOn"
                       {...restField}
                       name={[name, "range"]}
                       rules={[

@@ -9,7 +9,10 @@ dotenv.config({path: './config.env'});
 const PORT = 8000;
 const app = express();
 app.use(express.json());
-
+// app.use((req, res, next) => {
+//     console.log(req.url, req.body._id, req.body);
+//     next();
+// })
 app.use('/api/user', userRoutes);
 
 app.use(express.static(path.join(__dirname, '../public')));
