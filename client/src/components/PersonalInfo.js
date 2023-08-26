@@ -1,5 +1,7 @@
 import { Form, Input } from "antd";
 import React from "react";
+const user = localStorage.getItem('user')
+const firstName = user.firstName;
 
 const { TextArea } = Input;
 
@@ -13,7 +15,7 @@ function PersonalInfo() {
             label="First Name"
             rules={[{ required: true }]}
           >
-            <Input />
+            <Input initialValue= 'John'/>
           </Form.Item>
         </div>
         <div className="col-md-4">

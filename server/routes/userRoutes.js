@@ -8,7 +8,7 @@ app.post("/login", async (req, res) => {
       username: req.body.username,
       password: req.body.password,
     });
-
+    console.log(result)
     if (result) {
       res.send(result);
     } else {

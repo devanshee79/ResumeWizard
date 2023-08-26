@@ -9,7 +9,8 @@ import axios from "axios";
 const { TabPane } = Tabs;
 function Profile() {
   const [loading, setLoading] = useState(false);
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("user")).data;
+  console.log(user)
   const onFinish = async (values) => {
     setLoading(true);
     try {

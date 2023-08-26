@@ -18,6 +18,7 @@ function Login() {
       console.log(values);
       const user = await axios.post('api/user/login', values)
       setLoading(false);
+      console.log(user)
       localStorage.setItem("user", JSON.stringify(user));
       navigate('/home')
     }catch(err){
