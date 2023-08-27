@@ -41,3 +41,49 @@
     left: 40px!important;
     font-size: 27px!important;
 }
+
+/* Styles for screens up to 768px wide (typically mobile devices) */
+@media (max-width: 400px) {
+    /* Your CSS styles here */
+    .heroImg{
+        position: absolute;
+        top: 0px;
+        left: 100px;
+        width: 220px;
+        height: 200px;
+        size: 90px;
+    }
+    .p1{
+    margin: 30px;
+    position: absolute;
+    top: 200px;
+    font-family: Roboto;
+    font-size: 23px;
+    left: 50px;
+    font-weight: 600px;
+}
+.p2{
+    margin: 30px;
+    position: relative;
+    top: 230px;
+    left: 80px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 600px;
+}
+.p3{
+    position: absolute;
+    top: 270px!important;
+    font-family: Roboto;
+    left: 98px!important;
+    font-size: 10px!important;
+}
+.btn{
+    position: absolute;
+    top: 270px;
+    left: 30px;
+    margin: 40px;
+    width: 100px;
+    height: 30px !important;
+}
+}

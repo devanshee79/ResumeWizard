@@ -4,11 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "./../resources/defaultlayout.css";
 import { UserOutlined  } from "@ant-design/icons";
 function DefaultLayout(props) {
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("user")).data;
   const navigate = useNavigate();
   const menu = (
     <Menu>
-      <Menu.Item>
+      <Menu.Item >
       <Link to="/home">Home</Link>
       </Menu.Item>
       <Menu.Item>
@@ -28,8 +28,8 @@ function DefaultLayout(props) {
     <div className="layout">
       <div className="header">
         <h1 onClick={()=>navigate('/home')} style={{cursor:'pointer'}}>SHEY CV</h1>
-        <Dropdown overlay={menu} placement="bottomLeft">
-          <Button icon={<UserOutlined />}>{user.username}</Button>
+        <Dropdown overlay={menu} placement="bottomLeft" >
+          <Button className="dropdown" icon={<UserOutlined />}>{user.username}</Button>
         </Dropdown>
       </div>
       <div className="content" style={{overflow:'scroll'}}>{props.children}</div>

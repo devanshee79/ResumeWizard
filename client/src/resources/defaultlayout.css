@@ -9,7 +9,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: medium !important;
     font-size: 20px !important;
-    width: 1587px;
+    width: 1768px;
 }
 .header p{   
     margin: 0 0 0 15px;
@@ -23,7 +23,7 @@
     width:150px;
     overflow: hidden; 
     top: 2px;   
-    left: 0px !important;
+    left: 100px !important;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: medium !important;
     font-size: 20px !important;
@@ -31,7 +31,7 @@
 }
 
 .content{
-    height: 600px;
+    height: 650px;
     margin: 5px;
     /* border: 1px solid gray; */
     border-radius: 5px;
@@ -40,7 +40,7 @@
 }
 
 .ant-input{
-    width:200px;
+    width:300px;
 }
 .row{
     display:grid;    
@@ -51,7 +51,14 @@
 .col-md-4{
     margin: 10px;
 }
-
+.dropdown{
+    position: absolute;
+    right: 800px !important;
+}
+.ant-btn{ 
+    top:6px;
+    left: -30px;
+}
 @media (min-width: 800px) {
     .flex-container {
       flex-direction: column;

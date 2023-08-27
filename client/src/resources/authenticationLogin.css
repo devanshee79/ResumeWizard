@@ -65,3 +65,6 @@ hr{
     height: 20px !important;
 }
 
+@media (max-width: 400px) {
+    
+}
