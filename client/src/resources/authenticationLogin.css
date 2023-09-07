@@ -6,7 +6,7 @@
 }
 h1.auth{
     position: relative;
-    left: 190px;
+    left: 210px;
     font-size: 30px;
     font-weight: 700;
     color: rgba(41, 144, 172, 0.85) !important;
@@ -16,9 +16,13 @@ hr{
     margin-top: -5px;
     margin-bottom: 60px;
 }
+/* .loginBtn{
+    position: absolute;
+    left: 200px;
+} */
 .ant-btn{
-    position: relative !important;
-    left: 155px;
+    position: absolute !important;
+    right: 1700px!important;
     width: 170px;
     bottom: -40px;
     font-family: Arial, Helvetica, sans-serif;
@@ -66,5 +70,16 @@ hr{
 }
 
 @media (max-width: 400px) {
-    
+    h1.auth{
+        font-size: smaller;
+    }
+    button.ant-btn.css-dev-only-do-not-override-fpg3f5.ant-btn-primary.loginBtn {
+        position: relative;
+        left: 100px;
+        width: 150px;
+        height: 10px;
+        font-size: 15px;
+        border: 1px;
+        height: 10px;
+    }
 }

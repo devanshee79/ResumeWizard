@@ -11,7 +11,7 @@ function ExperienceProjects() {
       <Form.List name="experience">
         {(fields, { add, remove }) => (
           <>
-            <div className="row">
+            <div className="row1">
               {fields.map(({ key, name, ...restField }) => (
                 <>
                   <div className="col-md-3">
@@ -72,6 +72,7 @@ function ExperienceProjects() {
 
             <Form.Item>
               <Button
+              className="btn_exp"
                 type="dashed"
                 onClick={() => add()}
                 block
@@ -89,7 +90,7 @@ function ExperienceProjects() {
       <Form.List name="projects">
         {(fields, { add, remove }) => (
           <>
-            <div className="row">
+            <div className="row3">
               {fields.map(({ key, name, ...restField }) => (
                 <>
                   <div className="col-md-4">
@@ -139,6 +140,7 @@ function ExperienceProjects() {
 
             <Form.Item>
               <Button
+              className="btn_project"
                 type="dashed"
                 onClick={() => add()}
                 block

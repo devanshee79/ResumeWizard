@@ -9,7 +9,7 @@ function SkillsEducation() {
       <Form.List name="education">
         {(fields, { add, remove }) => (
           <>
-            <div className="row">
+            <div className=" row1 ant-form-item-control-input-content">
               {fields.map(({ key, name, ...restField }) => (
                 <>
                   <div className="col-md-3">
@@ -59,6 +59,7 @@ function SkillsEducation() {
 
             <Form.Item>
               <Button
+                className="btn_edu"
                 type="dashed"
                 onClick={() => add()}
                 block
@@ -67,6 +68,9 @@ function SkillsEducation() {
                 Add Education
               </Button>
             </Form.Item>
+            <br></br>
+            <br></br>
+            <br></br>
           </>
         )}
       </Form.List>
@@ -75,7 +79,7 @@ function SkillsEducation() {
       <Form.List name="skills">
         {(fields, { add, remove }) => (
           <>
-            <div className="row">
+            <div className="row row2  ">
               {fields.map(({ key, name, ...restField }) => (
                 <>
                   <div className="col-md-4">
@@ -87,7 +91,6 @@ function SkillsEducation() {
                     <Input placeholder="Technology" />
                   </Form.Item>
                   </div>
-
                   <div className="col-md-4">
                   <Form.Item
                     {...restField}
@@ -96,9 +99,7 @@ function SkillsEducation() {
                   >
                     <Input placeholder="Rating" />
                   </Form.Item>
-                  </div>
-
-                 
+                  </div>                 
                   <div className="col-md-2">
                   <MinusCircleOutlined style={{fontSize:25 , color:'tomato'}} onClick={() => remove(name)} />
                   </div>
@@ -108,6 +109,7 @@ function SkillsEducation() {
 
             <Form.Item>
               <Button
+                className="btn_skills"
                 type="dashed"
                 onClick={() => add()}
                 block

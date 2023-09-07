@@ -1,14 +1,13 @@
 import { Form, Input } from "antd";
 import React from "react";
 const user = localStorage.getItem('user')
-const firstName = user.firstName;
 
 const { TextArea } = Input;
 
 function PersonalInfo() {
   return (
     <div>
-      <div className="row">
+      <div className="row5">
         <div className="col-md-4">
           <Form.Item
             name="firstName"

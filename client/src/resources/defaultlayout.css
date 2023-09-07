@@ -42,25 +42,58 @@
 .ant-input{
     width:300px;
 }
+.row1 {
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* Define 5 equal-width columns */
+    grid-gap: 10px; /* Define the gap between grid items */
+    padding: 5px;
+  }
+  
+  .row2 {
+    display: grid;
+    grid-template-columns: repeat(3, 360px); /* Define 3 equal-width columns */
+    grid-gap: 10px; /* Define the gap between grid items */
+    padding: 5px;
+  }
+  .row3 {
+    display: grid;
+    grid-template-columns: repeat(4, 365px); /* Define 3 equal-width columns */
+    grid-gap: 10px; /* Define the gap between grid items */
+    padding: 5px;
+  }
+  .row5 {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* Define 5 equal-width columns */
+    grid-gap: 10px; /* Define the gap between grid items */
+    padding: 5px;
+  }
+  
+  .btn_edu,
+  .btn_skills,.btn_exp, .btn_project {
+     /* Add margin-top to create space between button and elements */
+    margin: 0px 0px 70px -160px;
+  }
+  
+.update{
+    position: relative;
+    /* top: -100px; */
+    left: 40px;
+}
 .row{
-    display:grid;    
-    grid: 150px / auto auto auto;
-    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(9, auto); /* Define 5 equal-width columns */
+    grid-gap: 5px; /* Define the gap between grid items */
     padding: 5px;
 }
 .col-md-4{
-    margin: 10px;
+    margin: 10px;    
 }
-.dropdown{
-    position: absolute;
+.dropdown{    
     right: 800px !important;
+    margin: 10px 190px;
+    top: 10px;
 }
-.ant-btn{ 
+/* .ant-btn{ 
     top:6px;
     left: -30px;
-}
-@media (min-width: 800px) {
-    .flex-container {
-      flex-direction: column;
-    }
-  }
+} */

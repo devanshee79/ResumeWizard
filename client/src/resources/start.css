@@ -8,7 +8,7 @@
 }
 .btn{
     position: absolute;
-    bottom: -320px;
+    top: 250px;
     left: 0px;
     margin: 40px;
     width: 250px;
@@ -80,9 +80,10 @@
 }
 .btn{
     position: absolute;
-    top: 270px;
-    left: 30px;
-    margin: 40px;
+    font-size: smaller;
+    top: 220px;
+    left: 70px;
+    margin: 20px;
     width: 100px;
     height: 30px !important;
 }

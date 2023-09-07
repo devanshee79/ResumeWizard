@@ -47,7 +47,7 @@ function Profile() {
             </TabPane>
           </Tabs>
 
-          <Button htmlType="submit">UPDATE</Button>
+          <Button className="update"htmlType="submit">UPDATE</Button>
         </Form>
       </div>
     </DefaultLayout>
