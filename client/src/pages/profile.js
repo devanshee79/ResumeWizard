@@ -10,7 +10,29 @@ const { TabPane } = Tabs;
 function Profile() {
   const [loading, setLoading] = useState(false);
   const user = JSON.parse(localStorage.getItem("user")).data;
-  console.log(user)
+  console.log("here", user)
+
+  const onChange = (key) => {
+    console.log(key);
+  };
+  const items = [
+    {
+      key: '1',
+      label: 'Personal Info',
+      children: <PersonalInfo/>,
+    },
+    {
+      key: '2',
+      label: "Skills and Education",
+      children: <SkillsEducation/>,
+    },
+    {
+      key: '3',
+      label: 'Experience and Projects',
+      children: <ExperienceProjects/>,
+    },
+  ];
+
   const onFinish = async (values) => {
     setLoading(true);
     try {
@@ -35,17 +57,13 @@ function Profile() {
         <h4><b>Update Profile</b></h4>
         <hr />
         <Form layout="vertical" onFinish={onFinish} initialValues={user}>
-          <Tabs defaultActiveKey="1">
-            <TabPane tab="Personal Info" key="1">
-              <PersonalInfo />
-            </TabPane>
-            <TabPane tab="Skills and Education" key="2">
-              <SkillsEducation />
-            </TabPane>
-            <TabPane tab="Experience / Projects" key="3">
-              <ExperienceProjects />
-            </TabPane>
-          </Tabs>
+          
+          <Tabs
+            defaultActiveKey="1"
+            items={items}
+            onChange={onChange}
+            indicatorSize={(origin) => origin - 16}          
+          />   
 
           <Button className="update"htmlType="submit">UPDATE</Button>
         </Form>

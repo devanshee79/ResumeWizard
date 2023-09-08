@@ -86,8 +86,8 @@ hr{
     }
     h1.auth{
         position: relative;
-        left: 20px;
-        font-size: 20px;
+        left: 220px;
+        font-size: 30px;
         font-weight: 700;
         color: rgba(41, 144, 172, 0.85) !important;
     }
@@ -97,10 +97,6 @@ hr{
         margin-bottom: 60px;
     }
     .ant-btn{
-        position: relative !important;
-        left: 120px;
-        width: 190px;
-        bottom: -60px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 21px;
         font-weight: 500 !important;

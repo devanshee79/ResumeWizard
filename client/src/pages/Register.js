@@ -13,6 +13,13 @@ function Register() {
     navigate("/");
   }
   const onFinish = async (values) => {
+
+    if (!values.username || !values.password || !values.cpassword) {
+      // Check if any of the required fields are missing
+      alert('Please fill in all required fields');
+      return;
+    }
+
     setLoading(true);
     try{
       console.log(values);

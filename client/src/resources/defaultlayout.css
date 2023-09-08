@@ -97,3 +97,22 @@
     top:6px;
     left: -30px;
 } */
+
+
+@media (max-width: 800px){
+    .content{
+        /* height: 650px; */
+        margin: 5px;
+        /* border: 1px solid gray; */
+        border-radius: 5px;
+        box-shadow: 0 0 3px rgba(128, 128, 128, 0.486);
+        padding: 10px;
+    }
+    
+    .row5 {
+        display: grid;
+        grid-template-columns: repeat(1, auto); /* Define 5 equal-width columns */
+        grid-gap: 10px; /* Define the gap between grid items */
+        padding: 5px;
+      }
+}
