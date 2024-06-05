@@ -1,90 +1,62 @@
-.heroImg{
-    position: absolute;
-    bottom: 50px;
-    right: 0px;
-    width: 720px;
-    height: 590px;
-    size: 200px;
+.container {
+  max-width: max-content;
+  position: relative;
+  left: 1.875rem;
+  top: 3.125rem;
+  display: flex;
+  flex-direction: row;
 }
-.btn{
-    position: absolute;
-    top: 250px;
-    left: 0px;
-    margin: 40px;
-    width: 250px;
-    height: 60px !important;
-}
-.content{
-    border: 0px;
+.heroImg {
+  position: relative;
+  top: 3.125rem;
+  left: 5rem;
+  width: 45rem;
+  height: 36.875rem;
 }
 
-.p1{
-    margin: 30px;
-    position: absolute;
-    top: 110px;
-    font-family: Roboto;
-    font-size: 70px;
-    font-weight: 600px;
-}
-.p2{
-    margin: 30px;
-    position: relative;
-    top: 200px;
-    font-family: Roboto;
-    font-size: 70px;
-    font-weight: 600px;
-}
-.p3{
-    position: absolute;
-    top: 310px!important;
-    font-family: Roboto;
-    left: 40px!important;
-    font-size: 27px!important;
+.btn {
+  position: relative;
+  bottom: 7.5rem;
+  left: 1.875rem;
+  margin: 2.5rem;
+  width: 14rem;
+  height: 4rem !important;
 }
 
-/* Styles for screens up to 768px wide (typically mobile devices) */
-@media (max-width: 400px) {
-    /* Your CSS styles here */
-    .heroImg{
-        position: absolute;
-        top: 0px;
-        left: 100px;
-        width: 220px;
-        height: 200px;
-        size: 90px;
-    }
-    .p1{
-    margin: 30px;
-    position: absolute;
-    top: 200px;
-    font-family: Roboto;
-    font-size: 23px;
-    left: 50px;
-    font-weight: 600px;
+.btn1, .btn2{
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 500 !important;
+    overflow: hidden;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: white !important;
+    color: black !important;
+    border: 3px solid rgba(41, 144, 172, 0.85) !important;
 }
-.p2{
-    margin: 30px;
-    position: relative;
-    top: 230px;
-    left: 80px;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 600px;
+
+.p1 {
+  margin: 1.875rem;
+  position: absolute;
+  top: 8.5rem;
+  font-family: Roboto;
+  font-size: 4.375rem;
+  font-weight: 400;
 }
-.p3{
-    position: absolute;
-    top: 270px!important;
-    font-family: Roboto;
-    left: 98px!important;
-    font-size: 10px!important;
+.p2 {
+  margin: 1.875rem;
+  position: relative;
+  top: 14.5rem;
+  font-family: Roboto;
+  font-size: 4.375rem;
+  font-weight: 400;
 }
-.btn{
-    position: absolute;
-    font-size: smaller;
-    top: 220px;
-    left: 70px;
-    margin: 20px;
-    width: 100px;
-    height: 30px !important;
+.p3 {
+  position: absolute;
+  top: 21rem !important;
+  font-family: Roboto;
+  left: 2.5rem !important;
+  font-size: 1.6875rem !important;
 }
-}
+
+

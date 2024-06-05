@@ -4,10 +4,17 @@
   const { TextArea } = Input;
   function ExperienceProjects() {
     return (
-      <div>
+      <div style={{
+        backgroundColor:"whiteSmoke",
+        border: "2px solid",
+        borderRadius:"2px",
+        borderColor:"#cccccc",
+        margin: "0 0 4rem",
+        
+      }}>
 
-        <h5><b>Experience</b></h5>
-        <hr />
+        <h5 style={{ fontSize: "1.5rem", fontWeight: "400", position: "relative", left: "1.5rem"}}>Experience</h5>
+   
         <Form.List name="experience">
           {(fields, { add, remove }) => (
             <>
@@ -77,6 +84,16 @@
                   onClick={() => add()}
                   block
                   icon={<PlusOutlined />}
+                  style={{
+                    position: "relative",
+                    top: "4rem",
+                    left: "1.5rem",
+                    width: "12rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    margin: "0 0 8.5rem"
+                  }}
                 >
                   Add Experience
                 </Button>
@@ -85,8 +102,8 @@
           )}
         </Form.List>
 
-        <h5><b>Projects</b></h5>
-        <hr />
+        <h5 style={{ fontSize: "1.5rem", fontWeight: "400", position: "relative", left: "1.5rem"}} 
+        >Projects</h5>
         <Form.List name="projects">
           {(fields, { add, remove }) => (
             <>
@@ -145,6 +162,16 @@
                   onClick={() => add()}
                   block
                   icon={<PlusOutlined />}
+                  style={{
+                    position: "relative",
+                    top: "4rem",
+                    left: "1.5rem",
+                    width: "12rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    margin: "0 0 10rem"
+                  }}
                 >
                   Add Project
                 </Button>

@@ -5,31 +5,34 @@ import PersonalInfo from "../components/PersonalInfo.js";
 import SkillsEducation from "../components/SkillsEducation.js";
 import ExperienceProjects from "../components/ExperienceProjects.js";
 import axios from "axios";
+import "../resources/profile.css";  // Import your custom CSS file
 
 const { TabPane } = Tabs;
+
 function Profile() {
   const [loading, setLoading] = useState(false);
-  const user = JSON.parse(localStorage.getItem("user")).data;
-  console.log("here", user)
+  const user = JSON.parse(localStorage.getItem("user"));
+  console.log("here", user);
 
   const onChange = (key) => {
     console.log(key);
   };
+
   const items = [
     {
       key: '1',
       label: 'Personal Info',
-      children: <PersonalInfo/>,
+      children: <PersonalInfo />,
     },
     {
       key: '2',
       label: "Skills and Education",
-      children: <SkillsEducation/>,
+      children: <SkillsEducation />,
     },
     {
       key: '3',
       label: 'Experience and Projects',
-      children: <ExperienceProjects/>,
+      children: <ExperienceProjects />,
     },
   ];
 
@@ -40,9 +43,11 @@ function Profile() {
       console.log(values);
       const result = await axios.post("api/user/update", {
         ...values,
-        _id: user._id
+        _id: user._id,
       });
-      localStorage.setItem("user", JSON.stringify(result.data));
+      const data = result.data;
+      console.log("->>", result, result.data, data);
+      localStorage.setItem("user", JSON.stringify(data));
       setLoading(false);
       message.success("Profile updated successfully");
     } catch (error) {
@@ -50,6 +55,7 @@ function Profile() {
       message.error("Registration failed");
     }
   };
+
   return (
     <DefaultLayout>
       {loading && <Spin size="large" />}
@@ -57,15 +63,12 @@ function Profile() {
         <h4><b>Update Profile</b></h4>
         <hr />
         <Form layout="vertical" onFinish={onFinish} initialValues={user}>
-          
           <Tabs
             defaultActiveKey="1"
             items={items}
             onChange={onChange}
-            indicatorSize={(origin) => origin - 16}          
-          />   
-
-          <Button className="update"htmlType="submit">UPDATE</Button>
+          />
+          <Button className="update" htmlType="submit">UPDATE</Button>
         </Form>
       </div>
     </DefaultLayout>

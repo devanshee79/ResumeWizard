@@ -1,0 +1,178 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.template4-parent {
+  background-color: #e0f7fa !important;
+  color: #333;
+  margin: 5rem auto;
+  border: 2px solid #3f51b5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  transition: border-color 0.3s;
+}
+
+.template4-parent:hover {
+  border-color: #1a237e;
+}
+
+/* Header section */
+.template4-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #3f51b5;
+  padding-bottom: 10px;
+  color: #3f51b5;
+  margin: 2rem 0;
+}
+
+.template4-top h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.template4-top p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Divider */
+.template4-divider {
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Sections */
+.template4-objective,
+.template4-education,
+.template4-experience,
+.template4-projects,
+.template4-skills {
+  margin-top: 20px;
+}
+
+.template4-objective h3,
+.template4-education h3,
+.template4-experience h3,
+.template4-projects h3,
+.template4-skills h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #3f51b5;
+}
+
+.template4-objective hr,
+.template4-education hr,
+.template4-experience hr,
+.template4-projects hr,
+.template4-skills hr {
+  border: none;
+  border-bottom: 1px solid #3f51b5;
+  margin: 5px 0;
+}
+
+.template4-objective p,
+.template4-education p,
+.template4-experience p,
+.template4-projects p,
+.template4-skills p {
+  font-size: 14px;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.template4-education h6,
+.template4-experience h6,
+.template4-projects h6,
+.template4-skills h6 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Flexbox alignment */
+.template4-d-flex {
+  display: flex;
+}
+
+.template4-align-items-center {
+  align-items: center;
+}
+
+.template4-flex-column {
+  flex-direction: column;
+}
+
+/* Projects section with bullet points */
+.template4-projects ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.template4-projects ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Print styles */
+@media print {
+  body {
+    margin: 4rem 3rem;
+    padding: 0;
+  }
+
+  .template4-parent {
+    padding: 0;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #e0f7fa;
+    color: #333;
+    padding: 10px 0 0;
+    border: none;
+  }
+
+  .template4-top h1 {
+    font-size: 20px;
+  }
+
+  .template4-objective h3,
+  .template4-education h3,
+  .template4-experience h3,
+  .template4-projects h3,
+  .template4-skills h3 {
+    font-size: 16px;
+  }
+
+  .template4-objective p,
+  .template4-education p,
+  .template4-experience p,
+  .template4-projects p,
+  .template4-skills p,
+  .template4-education h6,
+  .template4-experience h6,
+  .template4-projects h6,
+  .template4-skills h6 {
+    font-size: 12px;
+  }
+
+  .template4-divider {
+    margin: 10px 0;
+  }
+
+  .template4-objective,
+  .template4-education,
+  .template4-experience,
+  .template4-projects,
+  .template4-skills {
+    page-break-inside: avoid;
+  }
+
+  .template4-top {
+    page-break-after: avoid;
+  }
+}

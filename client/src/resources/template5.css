@@ -1,0 +1,138 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.template5-parent {
+    margin: 3rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* Header section */
+.template5-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #3f51b5;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.template5-top h1 {
+    font-size: 28px;
+    color: #3f51b5;
+    margin: 0;
+}
+
+.template5-top p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Divider */
+.template5-divider {
+    border-bottom: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+/* Sections */
+.template5-section {
+    margin-top: 15px;
+}
+
+.template5-section h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    background-color: #3f51b5; /* Highlighted section */
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.template5-section hr {
+    border: none;
+    border-bottom: 1px solid #3f51b5;
+    margin: 8px 0;
+}
+
+.template5-section p,
+.template5-section h6 {
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.template5-section h6 {
+    font-weight: bold;
+}
+
+/* Flexbox alignment */
+.template5-d-flex {
+    display: flex;
+}
+
+.template5-align-items-center {
+    align-items: center;
+}
+
+.template5-flex-column {
+    flex-direction: column;
+}
+
+/* Projects section with bullet points */
+.template5-projects ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.template5-projects ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        margin: 1rem;
+        padding: 0;
+    }
+
+    .template5-parent {
+        padding: 0;
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+    }
+
+    .template5-top h1 {
+        font-size: 20px;
+    }
+
+    .template5-section h3 {
+        font-size: 16px;
+    }
+
+    .template5-section p,
+    .template5-section h6 {
+        font-size: 12px;
+    }
+
+    .template5-divider {
+        margin: 8px 0;
+    }
+
+    .template5-section {
+        page-break-inside: avoid;
+    }
+
+    .template5-top {
+        page-break-after: avoid;
+    }
+}

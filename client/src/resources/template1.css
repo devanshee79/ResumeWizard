@@ -1,0 +1,131 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.temp1-parent {
+  position: relative;
+  top: 5rem;
+  background: #fff;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header section */
+.temp1-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.temp1-top h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.temp1-top p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Divider */
+.temp1-divider {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Sections */
+.temp1-objective,
+.temp1-education,
+.temp1-experience,
+.temp1-projects,
+.temp1-skills {
+  margin-top: 20px;
+}
+
+.temp1-objective h3,
+.temp1-education h3,
+.temp1-experience h3,
+.temp1-projects h3,
+.temp1-skills h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.temp1-objective hr,
+.temp1-education hr,
+.temp1-experience hr,
+.temp1-projects hr,
+.temp1-skills hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+.temp1-objective p,
+.temp1-education p,
+.temp1-experience p,
+.temp1-projects p,
+.temp1-skills p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.temp1-education h6,
+.temp1-experience h6,
+.temp1-projects h6,
+.temp1-skills h6 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Flexbox alignment */
+.temp1-d-flex {
+  display: flex;
+}
+
+.temp1-align-items-center {
+  align-items: center;
+}
+
+.temp1-flex-column {
+  flex-direction: column;
+}
+
+/* Print styles */
+@media print {
+  body {
+    margin: 1rem 2.3rem 1rem;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p,
+  h6 {
+    font-size: 10px;
+  }
+
+  .temp1-divider {
+    margin: 10px 0;
+  }
+
+  .temp1-objective,
+  .temp1-education,
+  .temp1-experience,
+  .temp1-projects,
+  .temp1-skills {
+    page-break-inside: avoid;
+  }
+
+  .temp1-top {
+    page-break-after: avoid;
+  }
+}

@@ -32,6 +32,7 @@ app.post("/register", async (req, res) => {
 
 app.post("/update", async (req, res) => {
   try {
+    console.log(req.body);
     const result = await User.findOneAndUpdate({ _id: req.body._id }, req.body, {returnDocument: 'after'});
     res.send(result);
   } catch (error) {

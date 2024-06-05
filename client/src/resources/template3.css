@@ -1,0 +1,167 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.template3-parent {
+    margin: 5rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* Header section */
+.template3-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    color: #4CAF50;
+    margin: 2rem 0;
+}
+
+.template3-top h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.template3-top p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Divider */
+.template3-divider {
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Sections */
+.template3-objective,
+.template3-education,
+.template3-experience,
+.template3-projects,
+.template3-skills {
+    margin-top: 20px;
+}
+
+.template3-objective h3,
+.template3-education h3,
+.template3-experience h3,
+.template3-projects h3,
+.template3-skills h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #4CAF50;
+}
+
+.template3-objective hr,
+.template3-education hr,
+.template3-experience hr,
+.template3-projects hr,
+.template3-skills hr {
+    border: none;
+    border-bottom: 1px solid #4CAF50;
+    margin: 5px 0;
+}
+
+.template3-objective p,
+.template3-education p,
+.template3-experience p,
+.template3-projects p,
+.template3-skills p {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.template3-education h6,
+.template3-experience h6,
+.template3-projects h6,
+.template3-skills h6 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Flexbox alignment */
+.template3-d-flex {
+    display: flex;
+}
+
+.template3-align-items-center {
+    align-items: center;
+}
+
+.template3-flex-column {
+    flex-direction: column;
+}
+
+/* Projects section with bullet points */
+.template3-projects ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.template3-projects ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        margin: 4rem 3rem;
+        padding: 0;
+    }
+
+    .template3-parent {
+        padding: 0;
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .template3-top h1 {
+        font-size: 20px;
+    }
+
+    .template3-objective h3,
+    .template3-education h3,
+    .template3-experience h3,
+    .template3-projects h3,
+    .template3-skills h3 {
+        font-size: 16px;
+    }
+
+    .template3-objective p,
+    .template3-education p,
+    .template3-experience p,
+    .template3-projects p,
+    .template3-skills p,
+    .template3-education h6,
+    .template3-experience h6,
+    .template3-projects h6,
+    .template3-skills h6 {
+        font-size: 12px;
+    }
+
+    .template3-divider {
+        margin: 10px 0;
+    }
+
+    .template3-objective,
+    .template3-education,
+    .template3-experience,
+    .template3-projects,
+    .template3-skills {
+        page-break-inside: avoid;
+    }
+
+    .template3-top {
+        page-break-after: avoid;
+    }
+}

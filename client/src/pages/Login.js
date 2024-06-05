@@ -19,7 +19,7 @@ function Login() {
       const user = await axios.post('api/user/login', values)
       setLoading(false);
       console.log(user)
-      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("user", JSON.stringify(user.data));
       navigate('/home')
     }catch(err){
       setLoading(false);
@@ -37,7 +37,7 @@ function Login() {
   return (
     <div className="auth-parent">
       {loading && <Spin />}
-      <Form layout='horizontal' onFinish={onFinish}>
+      <Form layout='horizontal' onFinish={onFinish} className='loginForm'>
       <LeftCircleFilled onClick= {handleBackBtn} style={{fontSize: "33px",color: "rgba(41, 144, 172, 0.85)", position: "relative", top: "60px"}}/>  
         <h1 className='auth'>Login</h1><hr />
       <Form.Item name="username" label="username" required="true">

@@ -9,7 +9,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: medium !important;
     font-size: 20px !important;
-    width: 1768px;
+    width: 1wh;
 }
 .header p{   
     margin: 0 0 0 15px;
@@ -31,16 +31,22 @@
 }
 
 .content{
-    height: 650px;
+    height:fit-content;
+    width: 1hw;
     margin: 5px;
-    /* border: 1px solid gray; */
+    /* border: 1px solid gray;
     border-radius: 5px;
-    box-shadow: 0 0 3px rgba(128, 128, 128, 0.486);
+    box-shadow: 0 0 3px rgba(128, 128, 128, 0.486); */
     padding: 10px;
 }
 
 .ant-input{
     width:300px;
+}
+
+.ant-row{
+    display: flex;
+    flex-direction: row;
 }
 .row1 {
     display: grid;
@@ -87,17 +93,52 @@
 }
 .col-md-4{
     margin: 10px;    
+    display: flex;
+    flex-direction: row;
 }
 .dropdown{    
     right: 800px !important;
     margin: 10px 190px;
     top: 10px;
+    height: 50px;
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-weight: 500 !important;
+    overflow: hidden;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: white !important;
+    color: black !important;
+    border: 3px solid rgba(41, 144, 172, 0.85) !important;
+    position: relative;
+    left: 130px;
 }
-/* .ant-btn{ 
-    top:6px;
-    left: -30px;
-} */
 
+.menu{
+  background-color: aqua;
+  font-size: larger;
+  font-family: 'Roboto';
+}
+.skills-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .skill-row {
+    display: flex;
+    align-items:flex-start;
+    gap: 40px;
+  }
+  
+  .skill-field {
+    /* flex: 1; */
+  }
+  
+  .skill-remove {
+    display: flex;
+    align-items: center;
+  }
+  
 
 @media (max-width: 800px){
     .content{

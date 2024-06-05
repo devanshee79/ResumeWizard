@@ -1,0 +1,137 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.template2-parent {
+    position: relative;
+    top: 5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header section */
+.template2-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.template2-top h1 {
+    font-size: 20px; /* Reduced font size */
+    margin: 0;
+}
+
+.template2-top p {
+    margin: 0;
+    font-size: 12px; /* Reduced font size */
+}
+
+/* Divider */
+.template2-divider {
+    border-bottom: 1px solid #ccc;
+    margin: 8px 0; /* Reduced margin */
+}
+
+/* Sections */
+.template2-objective,
+.template2-education,
+.template2-experience,
+.template2-projects,
+.template2-skills {
+    margin-top: 15px; /* Reduced margin */
+}
+
+.template2-objective h3,
+.template2-education h3,
+.template2-experience h3,
+.template2-projects h3,
+.template2-skills h3 {
+    font-size: 16px; /* Reduced font size */
+    margin-bottom: 5px;
+    background-color: gray; /* Maintained original color */
+    color: #fff;
+    padding: 8px; /* Reduced padding */
+    border-radius: 5px;
+}
+
+.template2-objective hr,
+.template2-education hr,
+.template2-experience hr,
+.template2-projects hr,
+.template2-skills hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 5px 0; /* Reduced margin */
+}
+
+.template2-objective p,
+.template2-education p,
+.template2-experience p,
+.template2-projects p,
+.template2-skills p {
+    font-size: 12px; /* Reduced font size */
+    margin: 5px 0;
+}
+
+.template2-education h6,
+.template2-experience h6,
+.template2-projects h6,
+.template2-skills h6 {
+    font-size: 12px; /* Reduced font size */
+    margin: 5px 0;
+}
+
+/* Flexbox alignment */
+.template2-d-flex {
+    display: flex;
+}
+
+.template2-align-items-center {
+    align-items: center;
+}
+
+.template2-flex-column {
+    flex-direction: column;
+}
+
+/* Print styles */
+@media print {
+    body {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 18px; /* Adjusted font size for print */
+    }
+
+    h3 {
+        font-size: 14px; /* Adjusted font size for print */
+    }
+
+    p, h6 {
+        font-size: 10px; /* Adjusted font size for print */
+    }
+
+    .template2-divider {
+        margin: 8px 0; /* Adjusted margin for print */
+    }
+
+    .template2-objective,
+    .template2-education,
+    .template2-experience,
+    .template2-projects,
+    .template2-skills {
+        page-break-inside: avoid;
+    }
+
+    .template2-top {
+        page-break-after: avoid;
+    }
+}

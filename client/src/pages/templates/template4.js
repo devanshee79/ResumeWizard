@@ -1,15 +1,14 @@
 import React from "react";
-import "../../resources/template2.css";
+import "../../resources/template4.css";
 
-function Template2() {
+function Template4() {
   const user = JSON.parse(localStorage.getItem("user"));
   return (
-    <div className="template2-parent">
-      <div className="template2-top template2-d-flex template2-flex-column">
+    <div className="template4-parent">
+      <div className="template4-top template4-d-flex justify-content-between">
         <h1>
           {user.firstName.toUpperCase()} {user.lastName.toUpperCase()}
         </h1>
-        <br></br>
         <div>
           <p>{user.email}</p>
           <p>{user.address}</p>
@@ -17,39 +16,35 @@ function Template2() {
         </div>
       </div>
 
-      <div className="template2-divider"></div>
 
-      <div className="template2-objective template2-section">
+      <div className="template4-objective">
         <h3>Objective</h3>
         <hr />
         <p>{user.carrierObjective}</p>
       </div>
 
-      <div className="template2-divider"></div>
-
-      <div className="template2-education template2-section">
+      <div className="template4-education">
         <h3>Education</h3>
         <hr />
         {user.education.map((education) => (
-          <div className="template2-d-flex template2-align-items-center" key={education.range}>
-            <h6 style={{ width: 100 }}>
+          <div className="template4-d-flex template4-align-items-center" key={education.range}>
+            <h6 style={{ width: 120 }}>
               <b>{education.range}:</b>
             </h6>
             <p>
-              <b>{education.qualification}</b> with <b>{education.percentage}%</b> in {education.institution}
+              <b>{education.qualification}</b> with{" "}
+              <b>{education.percentage}%</b> in {education.institution}
             </p>
           </div>
         ))}
       </div>
 
-      <div className="template2-divider"></div>
-
-      <div className="template2-experience template2-section">
+      <div className="template4-experience">
         <h3>Experience</h3>
         <hr />
         {user.experience.map((exp) => (
-          <div className="template2-d-flex template2-align-items-center" key={exp.range}>
-            <h6 style={{ width: 100 }}>
+          <div className="template4-d-flex template4-align-items-center" key={exp.range}>
+            <h6 style={{ width: 120 }}>
               <b>{exp.range}:</b>
             </h6>
             <p>
@@ -59,24 +54,27 @@ function Template2() {
         ))}
       </div>
 
-      <div className="template2-divider"></div>
-
-      <div className="template2-projects template2-section">
+      <div className="template4-projects">
         <h3>Projects</h3>
         <hr />
         {user.projects.map((project) => (
-          <div className="template2-d-flex template2-flex-column" key={project.title}>
+          <div className="template4-d-flex template4-flex-column" key={project.title}>
             <h6>
-              <b>{project.title} [{project.range}]</b>
+              <b>
+                {project.title} [{project.range}]{" "}
+              </b>
             </h6>
             <p>{project.rating}</p>
+            <ul>
+              {(project.description ? project.description.split("\n") : []).map((desc, index) => (
+                <li key={index}>{desc}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
 
-      <div className="template2-divider"></div>
-
-      <div className="template2-skills template2-section">
+      <div className="template4-skills">
         <h3>Skills</h3>
         <hr />
         {user.skills.map((skill, index) => (
@@ -87,4 +85,4 @@ function Template2() {
   );
 }
 
-export default Template2;
+export default Template4;
